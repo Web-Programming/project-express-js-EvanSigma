@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "nama": "Leptop Geming",
+        "harga": 15000000,
+        "deskripsi": "Leptop gaming dengan spesifikasi tinggi untuk pengalaman bermain game terbaik."
+    },
+    {
+        "id": 2,
+        "nama": "Smartphone Pro",
+        "harga": 7000000,
+        "deskripsi": "Smartphone dengan kamera canggih dan baterai tahan lama."
+    },
+    {
+        "id": 3,
+        "nama": "Headphone Wireless",
+        "harga": 1200000,
+        "deskripsi": "Headphone tanpa kabel dengan suara jernih dan bass kuat."
+    },
+    {
+        "id": 4,
+        "nama": "Smartwatch Sport",
+        "harga": 2000000,
+        "deskripsi": "Jam tangan pintar dengan fitur kesehatan dan olahraga lengkap."
+    },
+    {
+        "id": 5,
+        "nama": "Tablet Edukasi",
+        "harga": 3500000,
+        "deskripsi": "Tablet khusus untuk belajar dengan aplikasi edukasi premium."
+    },
+    {
+        "id": 6,
+        "nama": "Monitor 4K",
+        "harga": 4000000,
+        "deskripsi": "Monitor resolusi 4K untuk pengalaman visual yang tajam."
+    },
+    {
+        "id": 7,
+        "nama": "Keyboard Mekanik",
+        "harga": 900000,
+        "deskripsi": "Keyboard mekanik dengan lampu RGB dan switch responsif."
+    },
+    {
+        "id": 8,
+        "nama": "Mouse Gaming",
+        "harga": 600000,
+        "deskripsi": "Mouse gaming dengan DPI tinggi dan desain ergonomis."
+    },
+    {
+        "id": 9,
+        "nama": "Printer Wireless",
+        "harga": 1800000,
+        "deskripsi": "Printer nirkabel dengan fitur cetak cepat dan hemat tinta."
+    },
+    {
+        "id": 10,
+        "nama": "Speaker Bluetooth",
+        "harga": 750000,
+        "deskripsi": "Speaker portabel dengan koneksi Bluetooth dan suara menggelegar."
+    },
+    {
+        "id": 11,
+        "nama": "Kamera Mirrorless",
+        "harga": 8500000,
+        "deskripsi": "Kamera mirrorless dengan sensor besar dan hasil foto profesional."
+    },
+    {
+        "id": 12,
+        "nama": "Powerbank 20000mAh",
+        "harga": 400000,
+        "deskripsi": "Powerbank kapasitas besar untuk pengisian daya berulang."
+    },
+    {
+        "id": 13,
+        "nama": "Router WiFi 6",
+        "harga": 1300000,
+        "deskripsi": "Router dengan teknologi WiFi 6 untuk koneksi internet super cepat."
+    },
+    {
+        "id": 14,
+        "nama": "SSD Eksternal 1TB",
+        "harga": 1700000,
+        "deskripsi": "SSD eksternal dengan kecepatan transfer data tinggi."
+    },
+    {
+        "id": 15,
+        "nama": "Webcam Full HD",
+        "harga": 500000,
+        "deskripsi": "Webcam dengan resolusi Full HD untuk video call jernih."
+    },
+    {
+        "id": 16,
+        "nama": "Microphone USB",
+        "harga": 650000,
+        "deskripsi": "Microphone USB untuk perekaman suara berkualitas studio."
+    },
+    {
+        "id": 17,
+        "nama": "Drone Kamera",
+        "harga": 3000000,
+        "deskripsi": "Drone dengan kamera HD untuk foto dan video udara."
+    },
+    {
+        "id": 18,
+        "nama": "Smart TV 50 Inch",
+        "harga": 6000000,
+        "deskripsi": "Smart TV layar besar dengan fitur streaming lengkap."
+    },
+    {
+        "id": 19,
+        "nama": "Earbuds TWS",
+        "harga": 800000,
+        "deskripsi": "Earbuds true wireless stereo dengan suara berkualitas."
+    },
+    {
+        "id": 20,
+        "nama": "PC All-in-One",
+        "harga": 10000000,
+        "deskripsi": "PC all-in-one dengan desain ringkas dan performa tinggi."
+    }
+]
