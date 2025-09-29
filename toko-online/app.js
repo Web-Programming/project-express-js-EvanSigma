@@ -7,9 +7,9 @@ var logger = require('morgan');
 var engine = require('ejs-blocks');
 
 //perbaikan 2
-var indexRouter = require('./app_toko_online/routes/index');
-var usersRouter = require('./app_toko_online/routes/users');
-var productsRouter = require('./app_toko_online/routes/products');
+var indexRouter = require('../toko-online/app_toko_online/routes/index');
+var usersRouter = require('../toko-online/app_toko_online/routes/users');
+var productsRouter = require('../toko-online/app_toko_online/routes/products');
 var app = express();
 
 // view engine setup
