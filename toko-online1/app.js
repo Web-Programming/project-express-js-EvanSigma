@@ -1,3 +1,4 @@
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -8,13 +9,13 @@ var indexRouter = require('./app_toko_online/routes/index');// perbaikan 2
 var usersRouter = require('./app_toko_online/routes/users');
 var engine = require('ejs-blocks'); // menggunakan ejs block
 var app = express();
-var productRouter = require('./app_toko_online/routes/product');//tambahkan router dari product.js
-
+var productRouter = require('../app_toko_online/routes/product');//tambahkan router dari product.js
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_toko_online', 'views'));//perbaikan 1
 app.engine('ejs',engine); //daftarkan engine ejs-block
 app.set('view engine', 'ejs');
+app.engine('ejs', engine);
 
 app.use(logger('dev'));
 app.use(express.json());
