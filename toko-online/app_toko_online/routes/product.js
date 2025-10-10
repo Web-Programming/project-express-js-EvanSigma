@@ -3,6 +3,13 @@ var express = require('express');
 var router = express.Router();
 var productController = require('../controllers/ControllerProduct');
 var reviewController = require('../controllers/ControllerReview.js');
+var router=express.Router();
+var products=require('../models/product');
+var productController = require('../controllers/ControllerProduct');
+router.get('/all', productController.index);
+router.get('/id', productController.detail);
+
+    
 
 router.get('/:id', productController.getProductById);
 router.get('/:productId/review/:reviewId', reviewController.getReview);
