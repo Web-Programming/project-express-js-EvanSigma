@@ -1,41 +1,39 @@
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-require('./app_toko_online/config/db'); //jalankan file db.js untuk koneksi ke database
+var engine = require('ejs-blocks');
+require('./app_toko_online/models/db');//memanggil file db.js untuk koneksi ke database
 
-var indexRouter = require('./app_toko_online/routes/index');// perbaikan 2
+//perbaikan 2
+var indexRouter = require('./app_toko_online/routes/index');
 var usersRouter = require('./app_toko_online/routes/users');
-var engine = require('ejs-blocks'); // menggunakan ejs block
+var productsRouter = require('./app_toko_online/routes/products');
+var controllerProducts = require('./app_toko_online/controllers/ControllerProducts');
+var apiProductRouter = require('./app_toko_online/routes/api/product');
 var app = express();
-var productRouter = require('./app_toko_online/routes/product');//tambahkan router dari product.js
-var ControllerProduct = require('./app_toko_online/controllers/ControllerProduct');//import controller product
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'app_toko_online', 'views'));//perbaikan 1
-app.engine('ejs',engine); //daftarkan engine ejs-block
+app.set('views', path.join(__dirname,'app_toko_online', 'views'));//perbaikan 1
 app.set('view engine', 'ejs');
+app.engine('ejs', engine);
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//serving bootstrap
+app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules/bootstrap/dist')));
+app.use('/api/products', apiProductRouter);
 
-//Serving bootstrap
-app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
-// path join ini adalah path yang akan menggabungkan (joinkan) folder ke folder public
-// __dirname adalah folder project kita
-// 'node_modules/bootstrap/dist' adalah file yang akan kita akses
-// ada cara agar server tetap hidup walaupun sering ada perubahan yaitu dengan cara 'npm install nodemon'
-// nodemon adalah dependensi yang akan otomatis refresh server kita ketika terjadi perubahan
-// cara pakai nodemon adalah nodemon /bin/www
-// cara hapus dependensi adalah npm remove {nama dependensinya}
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/product', productRouter); //gunakan router product untuk route yang kita daftarkan tadi
+app.use('/products', productsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

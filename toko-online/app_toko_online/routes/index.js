@@ -1,42 +1,29 @@
-var express = require('express');
-//fungsi require bisa untuk mengimpor resource selain import dari jsnya
-var router = express.Router();
-var mainController = require('../controllers/main');
+ var express = require('express');
+ var router = express.Router();
+var controllerMain = require('../controllers/main');
 var searchController = require('../controllers/search');
-
-router.get('/', mainController.index);
+router.get('/', controllerMain.index);
 router.get('/search', searchController.searchByID);
 
-module.exports = router;
- /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', {
-//     title: 'Toko Online Sederhana', 
-//     products: products});
-// });
 
-// router.get("/search", function(req, res, next){
-//   //tulis kode untuk mendapatkan query pencarian 'q' dari req.query
-//   const q = req.query.q ? req.query.q.toLowerCase() : "";
-//   //filter array 'products'berdasarkan 'q'
-//   let filteredProducts;
-//   if (q === "") {
-//     // jika query kosong tampilkan semua produk
-//     filteredProducts = products;
-//   } else {
-//     // jika ada query filter berdasarkan nama produk
-//     filteredProducts = products.filter((product) =>
-//       product.name.toLowerCase().includes(q)
+/* GET home page. */
+//  router.get('/', function(req, res, next) {
+//    res.render('index', { 
+//      title: 'Toko Online Sederhana',
+//      products:products });
+//  });
+
+
+//  router.get('/search', function(req, res, next) {
+//     const query = req.query.q;
+//     const filteredProducts = products.filter(q =>
+//         q.name.toLowerCase().includes(query.toLowerCase()) ||
+//         q.description.toLowerCase().includes(query.toLowerCase())
 //     );
-//   }
-//   //kirim hasil filter ke view 'index' atau view 'search-result' baru
-//   res.render("index", {
-//     title: "Hasil Pencarian",
-//     products: filteredProducts,
-//     query: q
-//   });
+
+//     res.render('index', {
+//         title: 'Hasil Pencarian: ' + query,
+//         products: filteredProducts
+//     });
 // });
-
-// selesaikan fungsi route pencarian, pisahkan dengan controller
-
-
+ module.exports = router;
