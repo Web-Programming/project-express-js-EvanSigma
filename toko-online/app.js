@@ -12,7 +12,9 @@ var indexRouter = require('./app_toko_online/routes/index');
 var usersRouter = require('./app_toko_online/routes/users');
 var productsRouter = require('./app_toko_online/routes/products');
 var controllerProducts = require('./app_toko_online/controllers/ControllerProducts');
-var apiProductRouter = require('./app_toko_online/routes/api/product');
+var ControllerUser = require('./app_toko_online/controllers/ControllerUser');
+var apiProductRouter=require("./app_toko_online/routes/api/product");
+var apiUserRouter=require("./app_toko_online/routes/api/user");
 var app = express();
 
 
@@ -28,7 +30,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //serving bootstrap
 app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules/bootstrap/dist')));
-app.use('/api/products', apiProductRouter);
+app.use("/api/produk", apiProductRouter);
 
 
 app.use('/', indexRouter);
