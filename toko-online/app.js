@@ -30,12 +30,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //serving bootstrap
 app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules/bootstrap/dist')));
-app.use("/api/produk", apiProductRouter);
+app.use("/api/products", apiProductRouter);
 
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use("/api/users", apiUserRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

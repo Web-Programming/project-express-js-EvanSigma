@@ -1,27 +1,34 @@
-# melihat semua data produk
-# get http://localhost:3000/api/produk
+### GET All Product
+GET http://localhost:3000/api/orders
 
-#menambahkan data produk baru
-# post http://localhost:3000/api/produk
-# Content-Type: application/json
+### Insert New Product
+POST http://localhost:3000/api/orders
+content-type: application/json
 
-# {
-#   "name": "Mouse Gaming 2",
-#   "price":"350000",
-#   "description":"Mouse gaming dengan DPI tinggi",
-#   "stock":"20"
-# }
-
-# melihat data produk berdasarkan id
-# get http://localhost:3000/api/produk/68e8d3fda85f3e6886396fa1
-
-
-//update product
-PUT  
-Content-Type: application/json
 {
-  "name": "Mouse Gaming Pro",
-  "price":"450000",
-  "description":"Mouse gaming dengan DPI sangat tinggi",
-  "stock":"15"
+    "user": "68f2109a300764d7bbd91541",
+    "orderItems": [{
+        "product": "68ecc22c59af29524524a823",
+        "quantity": 2
+    }]
 }
+
+
+### Detail Product
+GET http://localhost:3000/api/produk/68ecc2774d49272f5636f31f
+
+### Update Product
+PUT http://localhost:3000/api/orders/68f4c18fdb4a73c06131e9bb
+content-type: application/json
+
+{
+    "user": "68f2109a300764d7bbd91541",
+    "orderItems": [{
+        "product": "68eb6fd6364f32a890e0ab45",
+        "quantity": 3,
+        "status": "Processing"
+    }]
+}
+
+### Delete Product
+DELETE http://localhost:3000/api/produk/68f4c18fdb4a73c06131e9bb

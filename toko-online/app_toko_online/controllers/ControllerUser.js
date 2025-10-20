@@ -124,4 +124,4 @@ try{
 const remove=async(req,res)=>{
 
 };
-module.exports={index,detail,all,create,detailProduk,update,remove};
+module.exports={detail,all,create,detailuser,update,remove};
